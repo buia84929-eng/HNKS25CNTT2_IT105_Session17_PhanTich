@@ -1,0 +1,145 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT">
+  <diagram id="seq-payment" name="Sequence Diagram">
+    <mxGraphModel dx="1540" dy="1015" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="actor" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Khách hàng" vertex="1">
+          <mxGeometry height="100" width="60" x="70" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="app" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;" value="RikkeiLogistics App" vertex="1">
+          <mxGeometry height="50" width="150" x="220" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="gateway" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;" value="Cổng thanh toán" vertex="1">
+          <mxGeometry height="50" width="150" x="440" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="queue" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;" value="Message Queue" vertex="1">
+          <mxGeometry height="50" width="150" x="660" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="billing" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;" value="Billing Service" vertex="1">
+          <mxGeometry height="50" width="150" x="880" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="la" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;strokeColor=#666666;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="100" y="180" as="sourcePoint" />
+            <mxPoint x="100" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lapp" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;strokeColor=#666666;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="295" y="140" as="sourcePoint" />
+            <mxPoint x="295" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lgw" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;strokeColor=#666666;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="515" y="140" as="sourcePoint" />
+            <mxPoint x="515" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lq" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;strokeColor=#666666;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="735" y="140" as="sourcePoint" />
+            <mxPoint x="735" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lb" edge="1" parent="1" style="endArrow=none;dashed=1;html=1;strokeColor=#666666;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="955" y="140" as="sourcePoint" />
+            <mxPoint x="955" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="actApp" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="120" width="12" x="289" y="205" as="geometry" />
+        </mxCell>
+        <mxCell id="actGw" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="195" width="12" x="509" y="255" as="geometry" />
+        </mxCell>
+        <mxCell id="actQ" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="105" width="12" x="729" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="actBill" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" value="" vertex="1">
+          <mxGeometry height="250" width="12" x="949" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="m1" edge="1" parent="1" style="html=1;endArrow=block;endFill=1;" value="1. Bấm Thanh toán">
+          <mxGeometry relative="1" x="-0.0476" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="100" y="210" as="sourcePoint" />
+            <mxPoint x="289" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m2" edge="1" parent="1" style="html=1;endArrow=block;endFill=1;" value="2. Tạo yêu cầu thanh toán">
+          <mxGeometry relative="1" x="-0.0481" y="10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="301" y="260" as="sourcePoint" />
+            <mxPoint x="509" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m3" edge="1" parent="1" style="html=1;dashed=1;endArrow=open;endFill=0;" value="3. Trả mã / URL thanh toán">
+          <mxGeometry relative="1" x="0.0481" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="509" y="310" as="sourcePoint" />
+            <mxPoint x="301" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m4" edge="1" parent="1" style="html=1;endArrow=block;endFill=1;" value="4. Thực hiện thanh toán">
+          <mxGeometry relative="1" x="-0.022" y="-10" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="100" y="370" as="sourcePoint" />
+            <mxPoint x="509" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m5" edge="1" parent="1" style="html=1;endArrow=block;endFill=1;" value="5. Async Webhook: kết quả + HMAC-SHA256">
+          <mxGeometry relative="1" x="-0.0481" y="15" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="521" y="435" as="sourcePoint" />
+            <mxPoint x="729" y="435" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="m6" edge="1" parent="1" style="html=1;endArrow=block;endFill=1;" value="6. Consumer Worker nhận giao dịch">
+          <mxGeometry relative="1" x="0.0481" y="15" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="741" y="505" as="sourcePoint" />
+            <mxPoint x="949" y="505" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qzdCsG2DIAmXPBKfLxyx-3" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="956" y="541" as="geometry" />
+        </mxCell>
+        <mxCell id="qzdCsG2DIAmXPBKfLxyx-4" edge="1" parent="1" style="html=1;align=left;spacingLeft=2;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;" target="qzdCsG2DIAmXPBKfLxyx-3" value="&lt;span style=&quot;text-align: center;&quot;&gt;7. Xác thực HMAC-SHA256&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="991" y="521" />
+              <mxPoint x="991" y="551" />
+            </Array>
+            <mxPoint x="961" y="521" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qzdCsG2DIAmXPBKfLxyx-6" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="956" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="qzdCsG2DIAmXPBKfLxyx-7" edge="1" parent="1" style="html=1;align=left;spacingLeft=2;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;" target="qzdCsG2DIAmXPBKfLxyx-6" value="&lt;span style=&quot;text-align: center;&quot;&gt;8. HMAC hợp lệ: Gạch nợ + lưu PaymentTransaction&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="991" y="610" />
+              <mxPoint x="991" y="640" />
+            </Array>
+            <mxPoint x="961" y="610" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qzdCsG2DIAmXPBKfLxyx-8" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;sequenceEdgeStyle&quot;,&quot;libavoidRouting&quot;:0,&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="40" width="10" x="956" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="qzdCsG2DIAmXPBKfLxyx-9" edge="1" parent="1" style="html=1;align=left;spacingLeft=2;endArrow=block;edgeStyle=sequenceEdgeStyle;libavoidRouting=0;curved=0;rounded=0;" target="qzdCsG2DIAmXPBKfLxyx-8" value="&lt;span style=&quot;text-align: center;&quot;&gt;9. Gạch nợ thành công: cập nhật Shipment = PAID&lt;/span&gt;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="991" y="680" />
+              <mxPoint x="991" y="710" />
+            </Array>
+            <mxPoint x="961" y="680" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
